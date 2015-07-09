@@ -1,0 +1,13 @@
+.movie_title,
+.movie_summary,
+.movie_box,
+.movie_social,
+.cta-social {
+	width: == ::[intrinsic-width] !require;	
+	height: == ::[intrinsic-height] !require;
+}
+
+.movie_summary[width] == .movie_box[width] !require;
+@v [.movie_title]-[.movie_summary]-[.movie_box]-[.movie_social] gap(10);
+.movie_summary[top] == .movie_title[bottom] !require; 
+@h [.movie_summary]-[.movie_box] gap(20) !strong;
